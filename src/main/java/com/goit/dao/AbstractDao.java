@@ -1,9 +1,9 @@
 package com.goit.dao;
 
-import com.goit.dao.dao_interfaces.Identity;
+import com.goit.dao.dao_tables_interfaces.Identity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import com.goit.dao.dao_interfaces.Dao;
+import com.goit.dao.dao_tables_interfaces.Dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

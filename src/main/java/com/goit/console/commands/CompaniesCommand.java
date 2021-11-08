@@ -78,6 +78,11 @@ public class CompaniesCommand implements Command {
   @Override
   public void printActiveMenu() {
     LOGGER.info("---------------------Companies menu---------------------");
-    LOGGER.info("Companies command list: create, get, getAll, update, delete");
+    LOGGER.info("Companies command list: ");
+    LOGGER.info("create [company_name]");
+    LOGGER.info("get [id]");
+    LOGGER.info("getAll");
+    LOGGER.info(" update [company_name]");
+    LOGGER.info("delete [id]");
   }
 }

@@ -2,6 +2,7 @@ package com.goit.console;
 
 import static com.goit.console.Command.pattern;
 
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.regex.Matcher;
 import org.apache.logging.log4j.*;
@@ -29,7 +30,7 @@ public class CommandHandler {
 //        int firstSpace = params.indexOf(" ");
 //        if (firstSpace > -1) {
 //            Command command = commandMap
-//                    .get(params.substring(0, firstSpace));
+//                    .getParams(params.substring(0, firstSpace));
 //            if (command != null) {
 //                command.handle(params.substring(firstSpace + 1));
 //            } else {
@@ -40,7 +41,7 @@ public class CommandHandler {
 //        }
 //    }
 
-    public void handleCommand(String params) throws ParseException {
+    public void handleCommand(String params) throws ParseException, SQLException {
 
         Matcher matcher = pattern.matcher(params);
         if (matcher.find()) {

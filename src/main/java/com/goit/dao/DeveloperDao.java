@@ -1,11 +1,8 @@
 package com.goit.dao;
 
-import java.sql.Date;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Optional;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.*;
 import com.goit.model.Developer;
 
 public class DeveloperDao extends AbstractDao<Developer> {

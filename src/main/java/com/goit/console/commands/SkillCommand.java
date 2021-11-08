@@ -82,6 +82,11 @@ public class SkillCommand implements Command {
   @Override
   public void printActiveMenu() {
     LOGGER.info("---------------------Skills menu---------------------");
-    LOGGER.info("Skills command list: create, get, getAll, update, delete");
+    LOGGER.info("Skills command list:");
+    LOGGER.info("create [industry] [level_skills]");
+    LOGGER.info("get [id]");
+    LOGGER.info("getAll");
+    LOGGER.info("update [industry] [level_skills]");
+    LOGGER.info("delete [id]");
   }
 }

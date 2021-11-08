@@ -1,5 +1,6 @@
 package com.goit.console;
 
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.Optional;
 import java.util.function.Consumer;
@@ -10,7 +11,7 @@ public interface Command {
 
     Pattern pattern = Pattern.compile("^\\w+");
 
-    void handle(String params, Consumer<Command> setActive) throws ParseException;
+    void handle(String params, Consumer<Command> setActive) throws ParseException, SQLException;
     void printActiveMenu();
     default Optional<String> getCommandString(String params) {
         Matcher matcher = pattern.matcher(params);

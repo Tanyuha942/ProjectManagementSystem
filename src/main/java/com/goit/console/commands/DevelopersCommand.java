@@ -98,6 +98,11 @@ public class DevelopersCommand implements Command {
   @Override
   public void printActiveMenu() {
     LOGGER.info("---------------------Developers menu---------------------");
-    LOGGER.info("Developers command list: create, get, getAll, update, delete");
+    LOGGER.info("Developers command list:");
+    LOGGER.info("create [last_name] [first_name] [surname] [age] [birth(format dd-MM-yyyy)] [gender] [company_id] [salary]");
+    LOGGER.info("get [id]");
+    LOGGER.info("getAll");
+    LOGGER.info("update [last_name] [first_name] [surname] [age] [birth(format dd-MM-yyyy)] [gender] [company_id] [salary]");
+    LOGGER.info("delete [id]");
   }
 }

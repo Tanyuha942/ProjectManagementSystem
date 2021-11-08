@@ -86,6 +86,11 @@ public class ProjectCommand implements Command {
   @Override
   public void printActiveMenu() {
     LOGGER.info("---------------------Projects menu---------------------");
-    LOGGER.info("Projects command list: create, get, getAll, update, delete");
+    LOGGER.info("Projects command list:");
+    LOGGER.info("create [project_name] [created(format dd-MM-yyyy)] [cost]");
+    LOGGER.info("get [id]");
+    LOGGER.info("getAll");
+    LOGGER.info("update [project_name] [created(format dd-MM-yyyy)] [cost]");
+    LOGGER.info("delete [id]");
   }
 }

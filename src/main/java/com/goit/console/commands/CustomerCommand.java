@@ -80,6 +80,11 @@ public class CustomerCommand implements Command {
   @Override
   public void printActiveMenu() {
     LOGGER.info("---------------------Customer menu---------------------");
-    LOGGER.info("Customers command list: create, get, getAll, update, delete");
+    LOGGER.info("Customers command list: ");
+    LOGGER.info("create [customer_name]");
+    LOGGER.info("get [id]");
+    LOGGER.info("getAll");
+    LOGGER.info("update [customer_name]");
+    LOGGER.info("delete [id]");
   }
 }

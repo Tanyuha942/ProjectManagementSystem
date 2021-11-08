@@ -1,6 +1,6 @@
 package com.goit.model;
 
-import com.goit.dao.dao_interfaces.Identity;
+import com.goit.dao.dao_tables_interfaces.Identity;
 
 public class Customer implements Identity {
 

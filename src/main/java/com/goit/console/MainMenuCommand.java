@@ -1,6 +1,7 @@
 package com.goit.console;
 
 import com.goit.console.commands.*;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.*;
 import java.util.function.Consumer;
@@ -15,7 +16,8 @@ public class MainMenuCommand implements Command {
       "companies", new CompaniesCommand(),
       "customers", new CustomerCommand(),
       "projects", new ProjectCommand(),
-      "skills", new SkillCommand()
+      "skills", new SkillCommand(),
+      "printInfo", new PrintInfoToConsoleCommand()
   );
 
   @Override
@@ -26,7 +28,7 @@ public class MainMenuCommand implements Command {
           try {
             setActive.accept(command);
             command.handle(params.replace(commandString.get(), "").trim(), setActive);
-          } catch (ParseException e) {
+          } catch (ParseException | SQLException e) {
             LOGGER.error("ParseException error: " + e);
           }
         });
@@ -35,6 +37,7 @@ public class MainMenuCommand implements Command {
   @Override
   public void printActiveMenu() {
     LOGGER.info("---------------------Main menu---------------------");
+    LOGGER.info("Main commands: [main, active, exit]");
     LOGGER.info("Command list: " + this.commands.keySet());
   }
 }

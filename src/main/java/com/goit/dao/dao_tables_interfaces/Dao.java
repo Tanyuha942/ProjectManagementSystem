@@ -1,4 +1,4 @@
-package com.goit.dao.dao_interfaces;
+package com.goit.dao.dao_tables_interfaces;
 
 import java.util.List;
 import java.util.Optional;

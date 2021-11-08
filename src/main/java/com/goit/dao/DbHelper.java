@@ -1,7 +1,6 @@
 package com.goit.dao;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.*;
 import com.goit.config.DataSourceHolder;
 import java.sql.*;
 
@@ -20,24 +19,6 @@ public class DbHelper {
             return 0;
         }
     }
-
-//    public static Optional<Long> executePreparedStatementAndGetId(String sql, ParameterSetter psCall) throws SqlReturnedException {
-//        try (Connection connection = DataSourceHolder.getDataSource().getConnection();
-//             PreparedStatement ps = connection.prepareStatement(sql)) {
-//            psCall.set(ps);
-//            ps.executeUpdate();
-//            try (ResultSet generatedKeys = ps.getGeneratedKeys()) {
-//                if (generatedKeys.next()) {
-//                    return Optional.of(generatedKeys.getLong(1));
-//                } else {
-//                    throw new SqlReturnedException("Execution failed, no one entity was returned");
-//                }
-//            }
-//        } catch (SQLException e) {
-//            LOGGER.error("Exception while trying do SQL request", e);
-//        }
-//        return Optional.empty();
-//    }
 
     public static ResultSet getWithPreparedStatement(String sql, ParameterSetter psCall) throws SQLException {
         try (Connection connection = DataSourceHolder.getDataSource().getConnection();
